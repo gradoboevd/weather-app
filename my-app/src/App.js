@@ -10,7 +10,9 @@ class App extends React.Component {
         city: null,
         error: null,
         inputValue: '',
+        weather: null,
     };
+    setLocation= (location) => this.setState( (state) => ({...state, inputValue: location}));
     clearData = () => this.setState(state => ({
         ...state,
         city: null,
@@ -27,12 +29,14 @@ class App extends React.Component {
             this.setState({
                 temperature: data.main.temp,
                 city: data.name,
+                weather: data.weather[0].main,
                 error: ""
             });
         } else {
             this.setState({
                 temperature: null,
                 city: null,
+                weather: null,
                 error: "Please enter the values."
             });
         }
@@ -42,17 +46,20 @@ class App extends React.Component {
         this.setState((state) => ({...state, inputValue}));
     };
     render() {
-        const {inputValue, temperature, city, error} = this.state;
+        const {inputValue, temperature, city, error, weather} = this.state;
         return (
                 <div className="">
                     {!(temperature && city) ?
                         <Main
-                        inputValue={inputValue}
+                            setLocation={this.setLocation}
+
+                            inputValue={inputValue}
                         setInputValue={this.setInputValue}
                         getWeather={this.getWeather}
                         />
                     :
                         <Forecast
+                            weather={weather}
                             clearData={this.clearData}
                             temperature={temperature}
                             city={city}

@@ -1,11 +1,12 @@
 import React from "react";
+import getWeatherPic from "../../helpers/getWeatherPic";
 import './Forecast.css'
 
 const Forecast = props => (
     <div className="forecast__info">
         <h1>Forecast info</h1>
         {
-            props.city  && <p className="forecast__info-item"> Location:
+            props.city  && <p className="forecast__info-item"> City:
                 <span> { props.city } </span>
             </p>
         }
@@ -15,9 +16,15 @@ const Forecast = props => (
             </p>
         }
         {
+            props.weather && <p className="forecast__info-item"> Weather:
+                <span> { getWeatherPic(props.weather) } </span>
+            </p>
+        }
+        {
             props.error && <p className="forecast__info-item">{ props.error }</p>
         }
         <button className="back" onClick={props.clearData}>Back</button>
+
     </div>
 );
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Maps from "../Maps/Maps";
 import "./Main.css"
 
 const Main = props => (
@@ -7,7 +8,8 @@ const Main = props => (
             <input
                 value={props.inputValue}
                 onChange={props.setInputValue}
-                name='city' className="inputCity"
+                name='city'
+                className="inputCity"
                 type="text"
                 placeholder="Enter the city..."
             />
@@ -19,7 +21,7 @@ const Main = props => (
         </div>
 
         <div>
-         maps
+            <Maps setLocation={props.setLocation}/>
         </div>
     </>
 
