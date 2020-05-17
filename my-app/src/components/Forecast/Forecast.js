@@ -17,7 +17,12 @@ const Forecast = props => (
         }
         {
             props.weather && <p className="forecast__info-item"> Weather:
-                <span> { getWeatherPic(props.weather) } </span>
+                <span> {(props.weather)} </span>
+            </p>
+        }
+        {
+            props.weather && <p className="forecast__info-item forecast__info-image">
+                 { getWeatherPic(props.weather) }
             </p>
         }
         {

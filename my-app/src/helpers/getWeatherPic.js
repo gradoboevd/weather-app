@@ -1,14 +1,14 @@
 import React from "react";
 import cloud from "../img/cloud.jpg";
-import clean from "../img/clean.jpg";
+import clear from "../img/clear.jpg";
 import rain from "../img/Rain.jpg";
 import pussycat from "../img/pussycat.png";
 
 export default (weather) => {
     switch (weather) {
-        case 'Cloud': return cloud;
-        case 'Rain': return rain;
-        case 'Clear': return clean;
-        default: return pussycat;
+        case 'Clouds': return <img className="picture" src={cloud}/>;
+        case 'Rain': return <img className="picture" src={rain}/>;
+        case 'Clear': return <img className="picture" src={clear}/>;
+        default: return <img className="picture" src={pussycat}/>;
     }
 }

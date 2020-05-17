@@ -30,3 +30,8 @@
     cursor:pointer;
     outline: none;
 }
+
+.picture {
+    height: 200px;
+    width: 300px;
+}

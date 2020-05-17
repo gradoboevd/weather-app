@@ -52,10 +52,9 @@ class App extends React.Component {
                     {!(temperature && city) ?
                         <Main
                             setLocation={this.setLocation}
-
                             inputValue={inputValue}
-                        setInputValue={this.setInputValue}
-                        getWeather={this.getWeather}
+                            setInputValue={this.setInputValue}
+                            getWeather={this.getWeather}
                         />
                     :
                         <Forecast
