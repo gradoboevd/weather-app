@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.getForecastButton {
+    color: #fff;
+    border: 2px solid #fff ;
+    background-color: #52CD6E;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor:pointer;
+    outline: none;
+    margin-left: 30px;
+}
+
+.inputCity {
+    border: 2px solid #2C9ACD;
+    padding: 5px;
+
+}

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.forecast__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.forecast__info h1{
+    margin-bottom: 20px;
+}
+
+.forecast__info-item {
+    margin-bottom: 20px;
+}
+
+.back {
+    width: fit-content;
+    color: #fff;
+    border: 2px solid #fff ;
+    background-color: #226ccd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor:pointer;
+    outline: none;
+}

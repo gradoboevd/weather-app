@@ -1,22 +1,23 @@
 import React from "react";
-
+import './Forecast.css'
 
 const Forecast = props => (
-    <div className="weather__info">
-        <button onClick={props.clearData}/>
+    <div className="forecast__info">
+        <h1>Forecast info</h1>
         {
-            props.city  && <p className="weather__key"> Location:
-                <span className="weather__value"> { props.city } </span>
+            props.city  && <p className="forecast__info-item"> Location:
+                <span> { props.city } </span>
             </p>
         }
         {
-            props.temperature && <p className="weather__key"> Temperature:
-                <span className="weather__value"> { props.temperature }	</span>
+            props.temperature && <p className="forecast__info-item"> Temperature:
+                <span> { props.temperature } </span>
             </p>
         }
         {
-            props.error && <p className="weather__error">{ props.error }</p>
+            props.error && <p className="forecast__info-item">{ props.error }</p>
         }
+        <button className="back" onClick={props.clearData}>Back</button>
     </div>
 );
 
